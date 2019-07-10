@@ -125,89 +125,89 @@ def game_hash
         game
       end
 
-  def num_points_scored(players_name)
-    game_hash[away][players].each do |hash|
-      hash.each do |info, stats|
-      if stats == players_name
-        return game_hash[away][players][hash][points]
-      end
-    end
-  end
-    game_hash[home][players].each do |hash|
-      hash.each do |info, stats|
-      if stats == players_name
-        return game_hash[home][players][hash][points]
-      end
-    end
-  end
-  end
-
-  def shoe_size(players_name)
-    game_hash[away][players].each do |hash|
-      hash.each do |info, stats|
-      if stats == players_name
-        return game_hash[away][players][hash][shoe]
-      end
-    end
-  end
-    game_hash[home][players].each do |hash|
-      hash.each do |info, stats|
-      if stats == players_name
-        return game_hash[home][players][hash][shoe]
-      end
-    end
-  end
-
-  def team_colors(name)
-    if game_hash[home][team_name] == name
-      return game_hash[home][colors]
-    else
-      return game_hash[away][colors]
-    end
-  end
-
-  def team_names
-    team_names = []
-    team_names << game_hash[home][team_name]
-    team_names << game_hash[away][team_name]
-    team_names
-  end
-
-def player_numbers(teams_name)
-  numbers = []
-  if game_hash[away][team_name] == teams_name
-    game_hash[away][players].each do |hash|
-      hash.each do |info, stats|
-        if info == number
-          numbers << stats
-        end
-      end
-    end
-  end 
-  else
-    game_hash[home][players].each do |hash|
-      hash.each do |info, stats|
-        if info == number
-          numbers << stats
-        end
-      end
-    end
-  end
-  numbers
-end
-
-def player_stats(player_name)
-  game_hash[home][players].each do |hash|
-    if hash[name] == player_name
-      return hash
-    end
-  end
-  game_hash[away][players].each do |hash|
-    if hash[name] == player_name
-      return hash
-    end
-  end
-end
+#   def num_points_scored(players_name)
+#     game_hash[away][players].each do |hash|
+#       hash.each do |info, stats|
+#       if stats == players_name
+#         return game_hash[away][players][hash][points]
+#       end
+#     end
+#   end
+#     game_hash[home][players].each do |hash|
+#       hash.each do |info, stats|
+#       if stats == players_name
+#         return game_hash[home][players][hash][points]
+#       end
+#     end
+#   end
+#   end
+#
+#   def shoe_size(players_name)
+#     game_hash[away][players].each do |hash|
+#       hash.each do |info, stats|
+#       if stats == players_name
+#         return game_hash[away][players][hash][shoe]
+#       end
+#     end
+#   end
+#     game_hash[home][players].each do |hash|
+#       hash.each do |info, stats|
+#       if stats == players_name
+#         return game_hash[home][players][hash][shoe]
+#       end
+#     end
+#   end
+#
+#   def team_colors(name)
+#     if game_hash[home][team_name] == name
+#       return game_hash[home][colors]
+#     else
+#       return game_hash[away][colors]
+#     end
+#   end
+#
+#   def team_names
+#     team_names = []
+#     team_names << game_hash[home][team_name]
+#     team_names << game_hash[away][team_name]
+#     team_names
+#   end
+#
+# def player_numbers(teams_name)
+#   numbers = []
+#   if game_hash[away][team_name] == teams_name
+#     game_hash[away][players].each do |hash|
+#       hash.each do |info, stats|
+#         if info == number
+#           numbers << stats
+#         end
+#       end
+#     end
+#   end
+#   else
+#     game_hash[home][players].each do |hash|
+#       hash.each do |info, stats|
+#         if info == number
+#           numbers << stats
+#         end
+#       end
+#     end
+#   end
+#   numbers
+# end
+#
+# def player_stats(player_name)
+#   game_hash[home][players].each do |hash|
+#     if hash[name] == player_name
+#       return hash
+#     end
+#   end
+#   game_hash[away][players].each do |hash|
+#     if hash[name] == player_name
+#       return hash
+#     end
+#   end
+# end
 
 
 # def big_shoe_rebounds
