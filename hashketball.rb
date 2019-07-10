@@ -209,20 +209,20 @@ def player_stats(player_name)
 end
 
 
-def big_shoe_rebounds
-  largest = 0
-  game_hash.each_key do |home_away|
-    game_hash[home_away][players].each do |hash|
-      if hash[shoe] > largest
-        largest = hash[shoe]
-      end
-    end
-  end
-  game_hash.each_key do |home_away|
-    game_hash[home_away][players].each do |hash|
-      if hash[shoe] == largest
-        return hash[rebounds]
-      end
-    end
-  end 
-end
+# def big_shoe_rebounds
+#   largest = 0
+#   game_hash.each_key do |home_away|
+#     game_hash[home_away][players].each do |hash|
+#       if hash[shoe] > largest
+#         largest = hash[shoe]
+#       end
+#     end
+#   end
+#   game_hash.each_key do |home_away|
+#     game_hash[home_away][players].each do |hash|
+#       if hash[shoe] == largest
+#         return hash[rebounds]
+#       end
+#     end
+#   end
+# end
