@@ -208,12 +208,8 @@ def player_stats(player_name)
   end
 end
 
+
 def big_shoe_rebounds
-
-
-end
-
-def big_shoe_person
   largest = 0
   game_hash.each_key do |home_away|
     game_hash[home_away][players].each do |hash|
